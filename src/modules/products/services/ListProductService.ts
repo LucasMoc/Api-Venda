@@ -1,7 +1,7 @@
 import AppError from "@shared/errors/AppError";
 import { getCustomRepository } from "typeorm";
-import Product from "../typeorm/entities/Porduct";
-import { ProductRepository } from "../typeorm/repositories/ProductsRepository";
+import Product from "../infra/typeorm/entities/Porduct";
+import { ProductRepository } from "../infra/typeorm/repositories/ProductsRepository";
 
 export class ListProductService {
   public async execute(): Promise<Product[]> {

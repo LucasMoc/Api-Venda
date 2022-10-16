@@ -1,4 +1,4 @@
-import {Router} from 'express';
+import { Router } from 'express';
 import ProductsController from '../controllers/ProductsController';
 import { celebrate, Joi, Segments } from 'celebrate';
 
@@ -14,7 +14,7 @@ productsRouter.get(
       id: Joi.string().uuid().required(),
     }
   }),
-   productsController.show);
+  productsController.show);
 
 productsRouter.post(
   '/',
@@ -26,7 +26,7 @@ productsRouter.post(
       quantity: Joi.number().required()
     }
   }),
- productsController.create);
+  productsController.create);
 
 productsRouter.put(
   '/:id',
@@ -41,7 +41,7 @@ productsRouter.put(
       quantity: Joi.number().required()
     }
   }),
-   productsController.update);
+  productsController.update);
 
 productsRouter.delete(
   '/:id',

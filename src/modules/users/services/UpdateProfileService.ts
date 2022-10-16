@@ -1,9 +1,9 @@
 import AppError from "@shared/errors/AppError";
 import { getCustomRepository } from "typeorm";
-import User from "../typeorm/entities/User";
+import User from "../infra/typeorm/entities/User";
 import path from "path";
 import fs from "fs";
-import { UserRepository } from "../typeorm/repositories/UsersRepository";
+import { UserRepository } from "../infra/typeorm/repositories/UsersRepository";
 import uploadConfig from "@config/upload"
 import { compare, hash } from "bcryptjs";
 

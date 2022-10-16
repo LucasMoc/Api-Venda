@@ -1,6 +1,6 @@
 import { instanceToInstance } from 'class-transformer';
 import { Request, Response } from "express";
-import { CreateSassionsService } from "../services/CreateSassionsService";
+import { CreateSassionsService } from "../../../services/CreateSassionsService";
 
 export default class SessionsController {
   public async create(req: Request, res: Response): Promise<Response> {

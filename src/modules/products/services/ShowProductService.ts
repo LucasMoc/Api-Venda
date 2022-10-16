@@ -1,9 +1,9 @@
 import AppError from "@shared/errors/AppError";
 import { getCustomRepository } from "typeorm";
-import Product from "../typeorm/entities/Porduct";
-import { ProductRepository } from "../typeorm/repositories/ProductsRepository";
+import Product from "../infra/typeorm/entities/Porduct";
+import { ProductRepository } from "../infra/typeorm/repositories/ProductsRepository";
 
-interface IRequest{
+interface IRequest {
   id: string;
 }
 
@@ -13,7 +13,7 @@ export class ShowProductService {
 
     const product = await productRepository.findOne(id);
 
-    if(!product){
+    if (!product) {
       throw new AppError('Product not found');
     }
 
